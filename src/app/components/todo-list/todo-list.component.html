@@ -1,0 +1,32 @@
+<div *ngIf="toDos !== undefined" class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-3">
+      {{nameTask}}
+    </div>
+    <div class="col-xs-12 col-sm-3">
+      {{statusTask}}
+    </div>
+    <div class="col-xs-12 col-sm-3">
+      {{startTask}}
+    </div>
+    <div class="col-xs-12 col-sm-3">
+      {{endTask}}
+    </div>
+  </div>
+  <div *ngFor="let task of toDos">
+    <div class="row">
+      <div class="col-xs-12 col-sm-3">
+        {{task.name}}
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        {{task.status | status}}
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        {{task.startDate | date: 'dd/MM/yyyy'}}
+      </div>
+      <div class="col-xs-12 col-sm-3" *ngIf="task.endDate !== undefined">
+        {{task.endDate | date: 'dd/MM/yyyy'}}
+      </div>
+    </div>
+  </div>
+</div>

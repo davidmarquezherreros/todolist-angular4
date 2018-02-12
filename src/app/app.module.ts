@@ -5,19 +5,26 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { TodoService } from 'app/services/todo.service';
+import { StatusPipe } from './pipes/status.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HeaderComponent
+    HeaderComponent,
+    TodoListComponent,
+    StatusPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    TodoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

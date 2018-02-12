@@ -5,4 +5,17 @@ export class Constants {
         CreateToDo: 'Create a ToDo',
         UpdateToDo: 'Update ToDo'
     };
+    static Components = {
+        List: {
+            TaskName: 'NAME',
+            TaskStatus: 'STATUS',
+            TaskStart: 'START DATE',
+            TaskEnd: 'END DATE'
+        }
+    };
+    static Status = {
+        Pending: 'PENDING',
+        Done: 'DONE',
+        Started: 'STARTED'
+    }
 }
