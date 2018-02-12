@@ -4,5 +4,5 @@ export enum StatusToDo {
     done
 }
 export class ToDo {
-    constructor(public name: string, public status: StatusToDo, public startDate: Date, public endDate?: Date) {}
+    constructor(public id: number, public name: string, public status: StatusToDo, public startDate: Date, public endDate?: Date) {}
 }

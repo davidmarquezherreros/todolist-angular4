@@ -1,22 +1,22 @@
 <div *ngIf="toDos !== undefined" class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-3">
-      {{nameTask}}
+      <b>{{nameTask}}</b>
     </div>
     <div class="col-xs-12 col-sm-3">
-      {{statusTask}}
+      <b>{{statusTask}}</b>
     </div>
     <div class="col-xs-12 col-sm-3">
-      {{startTask}}
+      <b>{{startTask}}</b>
     </div>
     <div class="col-xs-12 col-sm-3">
-      {{endTask}}
+      <b>{{endTask}}</b>
     </div>
   </div>
   <div *ngFor="let task of toDos">
     <div class="row">
       <div class="col-xs-12 col-sm-3">
-        {{task.name}}
+        <a href="/todo/{{task.id}}">{{task.name}}</a>
       </div>
       <div class="col-xs-12 col-sm-3">
         {{task.status | status}}

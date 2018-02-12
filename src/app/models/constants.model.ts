@@ -17,5 +17,10 @@ export class Constants {
         Pending: 'PENDING',
         Done: 'DONE',
         Started: 'STARTED'
+    };
+    static Routes = {
+        empty: '',
+        list: 'list',
+        detail: 'todo'
     }
 }

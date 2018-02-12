@@ -1,3 +1,13 @@
-<p>
-  todo-detail works!
-</p>
+<div class="container">
+  <div *ngIf="item !== undefined">
+    <div class="row">
+      <div class="col-xs-12 col-sm-1">{{item.name}}</div>
+      <div class="col-xs-12 col-sm-1">{{item.status | status}}</div>
+      <div class="col-xs-12 col-sm-1">{{item.startDate | date: 'dd/MM/yyyy'}}</div>
+      <div class="col-xs-12 col-sm-1">{{item.endDate | date: 'dd/MM/yyyy'}}</div>
+    </div>
+  </div>
+  <div id="actions">
+      <button type="button" class="btn" (click)="deleteItem()">Delete</button>
+  </div>
+</div>
