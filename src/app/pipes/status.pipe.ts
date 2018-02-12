@@ -7,7 +7,6 @@ import { Constants } from 'app/models/constants.model';
 export class StatusPipe implements PipeTransform {
 
   transform(value: number, args?: any): string {
-    console.log(value);
     switch (value) {
       case 0:
         return Constants.Status.Pending;

@@ -25,7 +25,7 @@ export class TodoService {
   }
 
   public setMockData(): void {
-    this.todos.push(new ToDo('Task 1', StatusToDo.done, new Date()));
+    this.todos.push(new ToDo('Task 1', StatusToDo.started, new Date()));
     this.todos.push(new ToDo('Task 2', StatusToDo.pending, new Date()));
     this.todos.push(new ToDo('Task 3', StatusToDo.done, new Date(), new Date()));
   }
