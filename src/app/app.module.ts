@@ -9,6 +9,7 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoService } from 'app/services/todo.service';
 import { StatusPipe } from './pipes/status.pipe';
 import { AppRoutingModule } from 'app/app-routing.module';
+import { TodoDetailComponent } from './components/todo-detail/todo-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppRoutingModule } from 'app/app-routing.module';
     HeaderComponent,
     HeaderComponent,
     TodoListComponent,
-    StatusPipe
+    StatusPipe,
+    TodoDetailComponent
   ],
   imports: [
     BrowserModule,
