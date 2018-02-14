@@ -4,14 +4,14 @@ import { ToDo, StatusToDo } from 'app/models/todo.model';
 @Injectable()
 export class TodoService {
   private todos: Array<ToDo> = new Array<ToDo>();
-  constructor() { 
+  constructor() {
     this.setMockData();
   }
 
   public createToDo(task: ToDo): boolean {
     try {
       this.todos.push(task);
-    } catch(ex) {
+    } catch (ex) {
       return false;
     }
   }
@@ -37,6 +37,15 @@ export class TodoService {
     } else {
       this.todos.splice(this.todos.indexOf(searchItem), 1);
       return true;
+    }
+  }
+
+  public updateToDo(updatedTodo: ToDo): boolean {
+    try {
+      this.todos[this.todos.indexOf(this.search(updatedTodo.id))] = updatedTodo;
+      return true;
+    } catch (ex) {
+      return false;
     }
   }
 

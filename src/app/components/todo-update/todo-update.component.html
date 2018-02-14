@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row custom-row">
+    <div class="col-xs-12 col-sm-12 custom-container jumbotron">
+
+      <form class="form-horizontal" [formGroup]="updateForm">
+        <fieldset>
+          <legend>Update</legend>
+
+          <div class="form-group">
+            <label for="inputName">Name</label>
+            <input type="text" id="inputName" formControlName="name">
+          </div>
+          <div *ngIf="updateForm.controls.name.invalid && updateForm.controls.name.touched">
+            Name is required
+          </div>
+          <div class="form-group">
+            <label for="inputStartDate">Start Date</label>
+            <input type="text" id="inputStartDate" formControlName="startDate">
+          </div>
+          <div *ngIf="updateForm.controls.startDate.invalid && updateForm.controls.startDate.touched">
+            StartDate is required
+          </div>
+          <div class="form-group">
+            <label for="inputEndDate">EndDate</label>
+            <input type="text" id="inputEndDate" formControlName="endDate">
+          </div>
+
+          <div class="form-group">
+            <label for="select">Status</label>
+            <select id="select">
+              <option [value]='0'>Pending</option>
+              <option [value]='1'>Started</option>
+              <option [value]='2'>Done</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="!updateForm.valid">Update</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>

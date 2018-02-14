@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -10,6 +10,7 @@ import { TodoService } from 'app/services/todo.service';
 import { StatusPipe } from './pipes/status.pipe';
 import { AppRoutingModule } from 'app/app-routing.module';
 import { TodoDetailComponent } from './components/todo-detail/todo-detail.component';
+import { TodoUpdateComponent } from './components/todo-update/todo-update.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,15 @@ import { TodoDetailComponent } from './components/todo-detail/todo-detail.compon
     HeaderComponent,
     TodoListComponent,
     StatusPipe,
-    TodoDetailComponent
+    TodoDetailComponent,
+    TodoUpdateComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     TodoService
